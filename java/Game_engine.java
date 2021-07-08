@@ -128,7 +128,7 @@ public class Game_engine extends View {
             if(enemies.elementAt(i).left_position<=0) {
                 enemies.removeElementAt(i);
                 characterHP.updateCharacterHP(character);
-                if(character.HP<=70) {
+                if(character.HP<=0) {
                     intent.putExtra("points",String.valueOf(score.points));
                     getContext().startActivity(intent);
                 }
@@ -178,7 +178,7 @@ public class Game_engine extends View {
                 {
                     enemyBullets.removeElementAt(i);
                     characterHP.updateCharacterHP(character);
-                    if(character.HP<=70) {
+                    if(character.HP<=0) {
                         intent.putExtra("points",String.valueOf(score.points));
                         getContext().startActivity(intent);
                     }
